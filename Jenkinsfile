@@ -17,10 +17,10 @@ pipeline {
           script {
             sh 'docker build -t flask:6.0 .'
           }
-         }
+        }
        }
       //stage('Deploy Image in to nexus registry') {
-        steps{
+        //steps{
          // script {
          //sh 'curl "admin:ravali" -X PUT http://18.212.25.74:8001/repository/k8s-task/flask:5.0 '
           //flask:3.0.push("latest")
@@ -52,6 +52,4 @@ pipeline {
             //}
        // }
   }  
-  }
-}    
-    
+}
