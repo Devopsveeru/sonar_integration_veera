@@ -18,7 +18,7 @@ pipeline {
             sh 'docker build -t flask:6.0 .'
           }
          }
-        }
+       }
       stage('Deploy Image in to nexus registry') {
         steps{
           script {
@@ -34,8 +34,8 @@ pipeline {
          }
       stage('Sonarqube') {
         environment {
-            scannerHome = tool 'sonarqube'
-    }
+            scannerHome = tool 'sonarqube'   
+        }
     steps {
         withSonarQubeEnv('sonarqube') {
             sh "${scannerHome}/bin/sonar-scanner"
@@ -43,8 +43,8 @@ pipeline {
         //timeout(time: 2, unit: 'MINUTES') {
         //    waitForQualityGate abortPipeline: true
         //}
+       }
      }
-   }
         // integrated test cases
         //stage('selinium-test') {
             //steps {
