@@ -36,11 +36,11 @@ pipeline {
       //stage('Sonarqube') {
         //environment {
             //scannerHome = tool 'sonarqube'   
-        }
+        //}
         //steps {
           //withSonarQubeEnv('sonarqube') {
             //sh "${scannerHome}/bin/sonar-scanner -X"
-          }
+          //}
         //timeout(time: 2, unit: 'MINUTES') {
         //    waitForQualityGate abortPipeline: true
         //}
@@ -52,5 +52,5 @@ pipeline {
                //sh 'python hello.py'
             //}
        // }
-  }  
-}
+    }
+}    
