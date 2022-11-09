@@ -28,7 +28,8 @@ pipeline {
             //sh 'docker tag flask:8.0 3.110.47.182:8081/repository/k8s-task/flask:8.0'
             sh 'docker login -u veera6305329398 -p Veera123@'
             //sh 'docker login -u admin -p Veera123@ 3.110.47.182:8081/repository/k8s-task/'
-            sh 'docker push flask:8.0'  
+              sh 'docker tag flask:8.0 veera6305329398/flask:8.0'
+            sh 'docker push veera6305329398/flask:8.0'  
             //sh 'docker push 3.110.47.182:8081/repository/k8s-task/flask:8.0'
             //sh 'docker logout http://3.110.47.182:8081/repository/k8s-task/'
               }
