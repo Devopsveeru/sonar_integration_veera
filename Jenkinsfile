@@ -25,7 +25,7 @@ pipeline {
           script {
             //sh 'curl "admin:ravali" -X PUT http://18.212.25.74:8001/repository/k8s-task/flask:5.0 '
           //flask:3.0.push("latest")
-            sh 'docker tag flask:3.110.47.182:8001/repository/k8s-task/flask:8.0'
+            sh 'docker tag flask:8.0 3.110.47.182:8001/repository/k8s-task/flask:8.0'
             //sh 'docker login -u ravali1505 -p Manoj@123@123'
             sh 'docker login -u admin -p Veera123@ 3.110.47.182:8001/repository/k8s-task/' 
             sh 'docker push 3.110.47.182:8001/repository/k8s-task/flask:8.0'
