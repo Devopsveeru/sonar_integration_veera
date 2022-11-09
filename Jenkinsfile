@@ -16,6 +16,7 @@ pipeline {
         steps{
           script {
             sh 'docker build -t flask:6.0 .'
+            sh 'docker run -dit 9090:9090 flask /bin/sh'  
           }
         }
        }
