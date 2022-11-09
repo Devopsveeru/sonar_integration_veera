@@ -1,6 +1,6 @@
 pipeline {
     environment {
-      registry = "3.110.47.182:8081/repository/k8s-task/"
+      registry = '3.110.47.182:8081/repository/k8s-task/'
       registryCredential = 'nexus'
       dockerImage = ''
       SCANNER_HOME = tool 'sonarqube'
