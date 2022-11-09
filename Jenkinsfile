@@ -15,8 +15,8 @@ pipeline {
       stage('Building image') {
         steps{
           script {
-            sh 'docker build -t flask:6.0 .'
-            sh 'docker run -dit -p 9090:9090 flask /bin/sh'  
+            sh 'docker build -t flask:8.0 .'
+            sh 'docker run -it -p 9090:9090 flask '  
           }
         }
        }
