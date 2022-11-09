@@ -9,7 +9,7 @@ pipeline {
     stages {
       stage('Cloning Git') {
         steps {
-          git branch: 'main', url: 'https://github.com/ganigapetaravali/task.git'
+          git branch: 'main', url: ''
         }
       }
       stage('Building image') {
