@@ -44,7 +44,7 @@ pipeline {
         //timeout(time: 2, unit: 'MINUTES') {
         //    waitForQualityGate abortPipeline: true
         //}
-       }
+       //}
       }
         // integrated test cases
         //stage('selinium-test') {
