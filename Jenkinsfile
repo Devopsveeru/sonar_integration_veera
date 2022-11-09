@@ -9,7 +9,7 @@ pipeline {
     stages {
       stage('Cloning Git') {
         steps {
-          git branch: 'main', url: ''
+          git branch: 'main', url: 'https://github.com/Devopsveeru/sonar_integration_veera.git'
         }
       }
       stage('Building image') {
