@@ -16,7 +16,7 @@ pipeline {
         steps{
           script {
             sh 'docker build -t flask:8.0 .'
-            sh 'docker run -it -p 9090:9090 flask '  
+            //sh 'docker run -it -p 9090:9090 flask '  
           }
         }
        }
@@ -33,13 +33,13 @@ pipeline {
               //}
            // }
         // }
-      stage('Sonarqube') {
-        environment {
-            scannerHome = tool 'sonarqube'   
+      //stage('Sonarqube') {
+        //environment {
+            //scannerHome = tool 'sonarqube'   
         }
-        steps {
-          withSonarQubeEnv('sonarqube') {
-            sh "${scannerHome}/bin/sonar-scanner -X"
+        //steps {
+          //withSonarQubeEnv('sonarqube') {
+            //sh "${scannerHome}/bin/sonar-scanner -X"
           }
         //timeout(time: 2, unit: 'MINUTES') {
         //    waitForQualityGate abortPipeline: true
